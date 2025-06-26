@@ -1,20 +1,24 @@
 <?php
 
-require_once __DIR__."/panel/classes/Autoloader.php";
-require_once __DIR__ . "/includes/navbar.php";
-$categoriesObj = new Categories();
+require_once __DIR__ . "/panel/classes/Autoloader.php";
 $productsPageObj = new PagesContent();
-$page = $productsPageObj->findAll(['page_name'=>'urunler'])[0];
-$categories = $categoriesObj->get();
+$page = $productsPageObj->findAll(['page_name' => 'urunler'])[0];
+$seoTitle = $page['seo_title'];
+$seoDescription = $page['seo_description'];
 
+$categoriesObj = new Categories();
+
+
+$categories = $categoriesObj->get();
+require_once __DIR__ . "/includes/navbar.php";
 ?>
 
 <!-- Products Hero Section -->
 
 <style>
-    .page-hero{
-        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('<?=$router->getBaseUrl().'assets/images/pages/'.$page['image']?>');
- 
+    .page-hero {
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('<?= $router->getBaseUrl() . 'assets/images/pages/' . $page['image'] ?>');
+
     }
 </style>
 <section class="page-hero">
@@ -40,7 +44,7 @@ $categories = $categoriesObj->get();
                     <div class="category-content">
                         <h2><?= $category['category_name'] ?></h2>
                         <p><?= $category['category_sub_description'] ?></p>
-                        <a href="katalog.php?kat=<?=$category['id']?>" class="category-link">Ürünleri Gör</a>
+                        <a href="katalog.php?kat=<?= $category['id'] ?>" class="category-link">Ürünleri Gör</a>
                     </div>
                 </div>
                 <?php
@@ -53,7 +57,7 @@ $categories = $categoriesObj->get();
 </section>
 <?php
 
-require_once __DIR__."/sorular.php";
+require_once __DIR__ . "/sorular.php";
 ?>
 
 <!-- Footer -->

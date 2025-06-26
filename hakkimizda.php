@@ -1,8 +1,12 @@
 <?php 
 require_once __DIR__."/panel/classes/Autoloader.php";
-require_once __DIR__."/includes/navbar.php";
 $pageObj = new PagesContent();
 $p = $pageObj->findAll(['page_name'=>'hakkimizda'])[0];
+$seoTitle = $p['seo_title'];
+$seoDescription = $p['seo_description'];
+require_once __DIR__."/includes/navbar.php";
+
+
 ?>
 
     <!-- About Hero Section -->

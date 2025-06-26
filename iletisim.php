@@ -1,17 +1,20 @@
 <?php
-require_once __DIR__."/panel/classes/Autoloader.php";
-require_once __DIR__ . "/includes/navbar.php";
-
+require_once __DIR__ . "/panel/classes/Autoloader.php";
 $pagesObj = new PagesContent();
 $p = $pagesObj->findAll(["page_name" => 'iletisim'])[0];
+$seoTitle = $p['seo_title'];
+$seoDescription = $p['seo_description'];
+require_once __DIR__ . "/includes/navbar.php";
+
+
 ?>
 
 <!-- Contact Hero Section -->
 
 <style>
-    .contact-hero{
-        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('<?=$router->getBaseUrl().'assets/images/pages/'.$p['image']?>');
- 
+    .contact-hero {
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('<?= $router->getBaseUrl() . 'assets/images/pages/' . $p['image'] ?>');
+
     }
 </style>
 <section class="contact-hero">
@@ -29,19 +32,19 @@ $p = $pagesObj->findAll(["page_name" => 'iletisim'])[0];
                 <i class="fas fa-map-marker-alt"></i>
                 <h3>Adres</h3>
                 <p>MumDekor Merkez Ofis<br>
-                   <?= $settings['adress']?>
-                 
+                    <?= $settings['adress'] ?>
+
             </div>
             <div class="contact-info-card">
                 <i class="fas fa-phone"></i>
                 <h3>Telefon</h3>
-                <p><?=$settings['phone']?>
-                   
+                <p><?= $settings['phone'] ?>
+
             </div>
             <div class="contact-info-card">
                 <i class="fas fa-envelope"></i>
                 <h3>E-posta</h3>
-                <p><?=$settings['site_mail']?></p>
+                <p><?= $settings['site_mail'] ?></p>
             </div>
             <div class="contact-info-card">
                 <i class="fas fa-clock"></i>
@@ -56,9 +59,8 @@ $p = $pagesObj->findAll(["page_name" => 'iletisim'])[0];
 <section class="map-section">
     <div class="container">
         <div class="map-container">
-            <iframe
-                src="<?=$settings['google_map']?>"
-                width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            <iframe src="<?= $settings['google_map'] ?>" width="100%" height="450" style="border:0;" allowfullscreen=""
+                loading="lazy"></iframe>
         </div>
     </div>
 </section>
