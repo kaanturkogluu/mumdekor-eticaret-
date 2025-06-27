@@ -1,1 +1,11 @@
-$sended_message_with_whatsapp burada kullanıc wpden mesaj atmazsa  0 olark kalıcak  onlar silinecek
+
+
+bildirimler yapılacak
+
+şipariş günceşlemesinde mail gönderimi
+
+mailler eventta gönderilecek 
+siparis gelince bildirim eklecnek
+mail göndericne vbildrm eklenec
+
+kargo güncellemesi mail gönderilecek
