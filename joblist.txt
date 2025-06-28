@@ -1,11 +1,6 @@
 
+ 
 
-bildirimler yapılacak
 
-şipariş günceşlemesinde mail gönderimi
-
-mailler eventta gönderilecek 
-siparis gelince bildirim eklecnek
-mail göndericne vbildrm eklenec
-
-kargo güncellemesi mail gönderilecek
+ 
+ 
