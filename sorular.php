@@ -1,8 +1,11 @@
 <?php
 
 $pagename = rtrim(basename($_SERVER['PHP_SELF']), '.php');
+
+if($pagename =='index'){ $pagename = 'anasayfa';}
 $questionObj = new Questions();
 $sorular = $questionObj->get('*', "page_name = 'all' OR page_name = '$pagename'");
+
 
 
 

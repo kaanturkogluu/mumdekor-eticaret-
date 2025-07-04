@@ -66,44 +66,9 @@ require_once __DIR__ . "/includes/navbar.php";
 </section>
 
 <!-- FAQ Section -->
-<section class="faq-section">
-    <div class="container">
-        <h2 class="section-title">Sıkça Sorulan Sorular</h2>
-        <div class="faq-grid">
-            <div class="faq-item">
-                <div class="faq-question">
-                    <h3>Siparişlerim ne zaman teslim edilecek?</h3>
-                    <i class="fas fa-chevron-down"></i>
-                </div>
-                <div class="faq-answer">
-                    <p>Siparişleriniz, ödeme onayından sonra 1-2 iş günü içinde kargoya verilir. Teslimat süresi,
-                        bulunduğunuz bölgeye göre 1-3 iş günü arasında değişmektedir.</p>
-                </div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-question">
-                    <h3>İade ve değişim politikası nedir?</h3>
-                    <i class="fas fa-chevron-down"></i>
-                </div>
-                <div class="faq-answer">
-                    <p>Ürünlerimizi teslim aldığınız tarihten itibaren 14 gün içinde iade edebilir veya
-                        değiştirebilirsiniz. Ürünün orijinal ambalajında ve kullanılmamış olması gerekmektedir.</p>
-                </div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-question">
-                    <h3>Ödeme seçenekleri nelerdir?</h3>
-                    <i class="fas fa-chevron-down"></i>
-                </div>
-                <div class="faq-answer">
-                    <p>Kredi kartı, banka kartı, havale/EFT ve kapıda ödeme seçeneklerimiz mevcuttur. Tüm ödemeleriniz
-                        256-bit SSL sertifikası ile güvence altındadır.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
+ 
 <?php
+require_once __DIR__."/sorular.php";
+
 require_once __DIR__ . "/includes/footer.php";
 ?>
